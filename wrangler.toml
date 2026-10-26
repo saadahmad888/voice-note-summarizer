@@ -1,0 +1,8 @@
+# Cloudflare Pages config. The AI binding gives the API free access to Workers AI
+# (Whisper speech-to-text + Llama) — no API keys needed.
+name = "voice-note-summarizer"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-01"
+
+[ai]
+binding = "AI"

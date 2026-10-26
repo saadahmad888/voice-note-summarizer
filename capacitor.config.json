@@ -1,0 +1,12 @@
+{
+  "appId": "com.voicenotesummarizer.app",
+  "appName": "Voice Note Summarizer",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#F1F0E8"
+  },
+  "plugins": {
+    "SystemBars": { "style": "DEFAULT" }
+  }
+}

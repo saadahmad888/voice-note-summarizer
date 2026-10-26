@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add("js")</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Summarize a Voice Note Online — Free | Voice Note Summarizer</title>
+    <meta name="description" content="Upload or share a WhatsApp voice note and get a three-line summary, Roman Urdu version and quick replies. Free, works in your browser, Urdu, Punjabi and English.">
+    <link rel="canonical" href="{{SITE_URL}}/app/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0F2A1F">
+    <meta name="color-scheme" content="light dark">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{APP_NAME}}">
+    <meta property="og:title" content="Summarize a voice note online — free">
+    <meta property="og:description" content="Pick a voice note, read it in three lines. Urdu, Punjabi and English.">
+    <meta property="og:url" content="{{SITE_URL}}/app/">
+    <meta property="og:image" content="{{SITE_URL}}/assets/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A 6:47 voice note turned into a three-line summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{SITE_URL}}/assets/img/og-image.png">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preload" href="/assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/base.css?v={{ASSET_V}}">
+    <link rel="stylesheet" href="/assets/css/app.css?v={{ASSET_V}}">
+    <script src="/assets/js/config.js?v={{ASSET_V}}"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "{{APP_NAME}} — online",
+      "url": "{{SITE_URL}}/app/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires JavaScript and a modern browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "{{SITE_URL}}/#website" }
+    }
+    </script>
+  </head>
+  <body class="app">
+    <header class="bar">
+      <a class="bar__back web-only" href="/" aria-label="Back to home">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </a>
+      <span class="bar__mark" aria-hidden="true">
+        <img src="/assets/img/favicon.svg" width="30" height="30" alt="">
+      </span>
+      <p class="bar__title">Voice Note Summarizer</p>
+      <a class="bar__get web-only" href="{{APK_URL}}" rel="nofollow" data-hide-native>Get the app</a>
+    </header>
+
+    <main class="main" id="main">
+      <h1 class="title">Summarize a voice note</h1>
+
+      <section class="drop" id="drop" aria-label="Add a voice note">
+        <input id="file" class="sr-only" type="file" accept="audio/*,.opus,.ogg,.oga,.m4a,.mp3,.wav,.aac,.amr,.webm,.3gp,.mp4" multiple>
+        <span class="drop__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="64" height="64"><circle class="ring r1" cx="32" cy="32" r="22"/><circle class="ring r2" cx="32" cy="32" r="22"/><rect x="25" y="14" width="14" height="24" rx="7"/><path d="M19 31a13 13 0 0 0 26 0M32 44v6M26 50h12"/></svg>
+        </span>
+        <label class="btn btn--violet btn--big" for="file">Choose a voice note</label>
+        <p class="drop__or web-only">or drop it here</p>
+        <p class="drop__hint native-only">Fastest way: in WhatsApp, long-press a voice note, tap <b>Share</b>, pick <b>Voice Note Summarizer</b>.</p>
+        <p class="drop__hint web-only">Save the voice note from WhatsApp first (.opus, .ogg, .m4a, .mp3 and .wav all work).</p>
+      </section>
+
+      <details class="opts">
+        <summary>Options</summary>
+        <div class="opts__grid">
+          <label>Summary language
+            <select id="outLang">
+              <option value="both">English + Roman Urdu</option>
+              <option value="en">English only</option>
+              <option value="roman">Roman Urdu only</option>
+              <option value="urdu">اردو (Urdu script)</option>
+            </select>
+          </label>
+          <label>Spoken language
+            <select id="inLang">
+              <option value="">Detect automatically</option>
+              <option value="ur">Urdu</option>
+              <option value="pa">Punjabi</option>
+              <option value="hi">Hindi</option>
+              <option value="en">English</option>
+            </select>
+          </label>
+          <label>Sender's name <span class="opt">optional</span>
+            <input id="sender" type="text" placeholder="Khala" maxlength="40" autocomplete="off">
+          </label>
+        </div>
+      </details>
+
+      <ol class="jobs" id="jobs" aria-live="polite"></ol>
+
+      <p class="empty" id="empty">No notes yet. Pick one above, or <button type="button" class="link" id="sample">see a sample summary</button>.</p>
+    </main>
+
+    <footer class="foot-app">
+      <p><a class="web-only" href="/privacy/">Privacy</a><span class="native-only">Audio is processed and discarded. Nothing is saved.</span> <span class="ver">v{{VERSION}}</span></p>
+    </footer>
+
+    <template id="job-tpl">
+      <li class="job">
+        <div class="job__head">
+          <span class="job__icon" aria-hidden="true"><span class="bars bars--s"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+          <div class="job__meta"><p class="job__name"></p><p class="job__status"></p></div>
+          <button class="job__x" type="button" aria-label="Remove">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <div class="job__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+        <div class="job__body"></div>
+      </li>
+    </template>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="/assets/vendor/capacitor.js?v={{ASSET_V}}"></script>
+    <script src="/assets/js/audio.js?v={{ASSET_V}}"></script>
+    <script src="/assets/js/app.js?v={{ASSET_V}}"></script>
+  </body>
+</html>

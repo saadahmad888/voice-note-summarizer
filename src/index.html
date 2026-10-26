@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add("js")</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Voice Note Summarizer – WhatsApp Voice Notes in 3 Lines</title>
+    <meta name="description" content="Free app that turns long WhatsApp voice notes into a 3-line summary. Understands Urdu, Punjabi and English. Android APK or use online, no sign-up.">
+    <meta name="keywords" content="voice note summarizer, WhatsApp voice note to text, summarize voice notes, Urdu voice to text, Punjabi voice to text, Roman Urdu summary, voice message transcription, audio summary app, family group voice notes, voice note summary APK">
+    <meta name="author" content="{{OWNER_NAME}}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="{{SITE_URL}}/">
+    <meta name="theme-color" content="#0F2A1F">
+    <meta name="color-scheme" content="light dark">
+    <meta name="application-name" content="{{APP_NAME}}">
+    <meta name="apple-mobile-web-app-title" content="{{SHORT_NAME}}">
+    <meta name="format-detection" content="telephone=no">
+    {{VERIFICATION_META}}
+    <!-- Social previews: WhatsApp, Facebook, LinkedIn, X, Telegram, Slack, Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{APP_NAME}}">
+    <meta property="og:title" content="Voice Note Summarizer — 6-minute voice notes, read in 3 lines">
+    <meta property="og:description" content="Share Khala's long voice note, read three lines, reply in seconds. Free. Urdu, Punjabi and English.">
+    <meta property="og:url" content="{{SITE_URL}}/">
+    <meta property="og:image" content="{{SITE_URL}}/assets/img/og-image.png">
+    <meta property="og:image:secure_url" content="{{SITE_URL}}/assets/img/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A 6:47 voice note from Khala turned into a three-line summary on a phone">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ur_PK">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Voice Note Summarizer — 6-minute voice notes, read in 3 lines">
+    <meta name="twitter:description" content="Share a long voice note, read three lines, reply in seconds. Urdu, Punjabi and English.">
+    <meta name="twitter:image" content="{{SITE_URL}}/assets/img/og-image.png">
+    <meta name="twitter:image:alt" content="A 6:47 voice note turned into a three-line summary">
+    {{TWITTER_HANDLE_META}}
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="preload" href="/assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/base.css?v={{ASSET_V}}">
+    <link rel="stylesheet" href="/assets/css/site.css?v={{ASSET_V}}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "{{SITE_URL}}/#website",
+          "url": "{{SITE_URL}}/",
+          "name": "{{APP_NAME}}",
+          "description": "Turn long WhatsApp voice notes into three-line summaries in Urdu, Punjabi and English.",
+          "inLanguage": "en",
+          "publisher": { "@id": "{{SITE_URL}}/#owner" }
+        },
+        {{OWNER_PERSON_JSON}},
+        {
+          "@type": ["SoftwareApplication", "MobileApplication"],
+          "@id": "{{SITE_URL}}/#app",
+          "name": "{{APP_NAME}}",
+          "alternateName": ["Voice Note Summary", "WhatsApp Voice Note Summarizer", "Khala ka voice note"],
+          "url": "{{SITE_URL}}/",
+          "applicationCategory": "UtilitiesApplication",
+          "applicationSubCategory": "Speech to text",
+          "operatingSystem": "Android 7.0+, Web browser",
+          "softwareVersion": "{{VERSION}}",
+          "downloadUrl": "{{APK_URL}}",
+          "installUrl": "{{SITE_URL}}/app/",
+          "image": "{{SITE_URL}}/assets/img/icon-512.png",
+          "screenshot": "{{SITE_URL}}/assets/img/og-image.png",
+          "inLanguage": ["en", "ur", "pa"],
+          "description": "Share a long WhatsApp voice note and read it in three lines. Pulls out dates, places and who brings what. Understands Urdu, Punjabi and English mixed in one note.",
+          "featureList": [
+            "Three-line summary of any voice note",
+            "Urdu, Punjabi and English in the same note",
+            "Pulls out dates, places and who brings what",
+            "Roman Urdu summary and ready-made replies",
+            "Share straight from WhatsApp on Android",
+            "Full transcript when you need it"
+          ],
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+          "author": { "@id": "{{SITE_URL}}/#owner" },
+          "datePublished": "{{BUILD_DATE}}"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{SITE_URL}}/#webpage",
+          "url": "{{SITE_URL}}/",
+          "name": "Voice Note Summarizer — Long WhatsApp Voice Notes in 3 Lines",
+          "isPartOf": { "@id": "{{SITE_URL}}/#website" },
+          "about": { "@id": "{{SITE_URL}}/#app" },
+          "primaryImageOfPage": { "@type": "ImageObject", "url": "{{SITE_URL}}/assets/img/og-image.png", "width": 1200, "height": 630 },
+          "dateModified": "{{BUILD_DATE}}",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "{{SITE_URL}}/#faq",
+          "mainEntity": [
+            { "@type": "Question", "name": "How do I summarize a WhatsApp voice note?", "acceptedAnswer": { "@type": "Answer", "text": "On Android, install the app, then long-press the voice note in WhatsApp, tap Share and choose Voice Note Summarizer. On any phone or computer, open the online app, pick the voice note file and tap Summarize. You get three lines, a Roman Urdu summary and ready replies." } },
+            { "@type": "Question", "name": "Does it understand Urdu and Punjabi?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is built for notes that mix Urdu, Punjabi and English in the same sentence, which is how most family voice notes sound. Summaries come out in English and Roman Urdu." } },
+            { "@type": "Question", "name": "Is Voice Note Summarizer free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Android APK and the online app are free, with no sign-up." } },
+            { "@type": "Question", "name": "Are my voice notes saved?", "acceptedAnswer": { "@type": "Answer", "text": "No. Audio is sent over an encrypted connection, turned into text, summarized and then discarded. Nothing is stored on a server and there are no accounts." } },
+            { "@type": "Question", "name": "How long can a voice note be?", "acceptedAnswer": { "@type": "Answer", "text": "Up to 30 minutes per note. A typical six-minute note is summarized in under half a minute." } },
+            { "@type": "Question", "name": "How do I install the APK?", "acceptedAnswer": { "@type": "Answer", "text": "Tap Download APK, open the file, allow installs from your browser when Android asks, then tap Install. After that, Voice Note Summarizer appears in the WhatsApp share menu." } }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="site">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav" id="top">
+      <div class="wrap nav__inner">
+        <a class="brand" href="/" aria-label="{{APP_NAME}} home">
+          <span class="brand__mark" aria-hidden="true">
+            <img src="/assets/img/favicon.svg" width="34" height="34" alt="">
+          </span>
+          <span class="brand__name">Voice Note Summarizer</span>
+        </a>
+        <nav aria-label="Main">
+          <ul class="nav__links">
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--small btn--ink" href="/app/">Use online</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="wrap hero__grid">
+          <div class="hero__copy">
+            <p class="hero__quote" data-reveal><span class="urdu" lang="ur" dir="rtl">خالہ کا وائس نوٹ</span><span class="hero__quote-en">“Khala ka voice note”</span></p>
+            <h1 id="hero-title" class="hero__title" data-reveal>Voice Note <span class="g">Summarizer</span></h1>
+            <p class="hero__lede" data-reveal>The family group runs on long voice notes. Nobody has time to hear all of them. Share one here and read it in three lines.</p>
+            <div class="hero__cta" data-reveal>
+              <a class="btn btn--violet btn--big" href="{{APK_URL}}" data-apk rel="nofollow">
+                <svg class="ico ico--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5"/><path d="M5 19h14"/></svg>
+                Download APK
+              </a>
+              <a class="btn btn--ghost btn--big" href="/app/">
+                <svg class="ico ico--globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path class="globe-lines" d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></svg>
+                Use online
+              </a>
+            </div>
+            <p class="hero__fine" data-reveal>Free, no sign-up. Android APK, or any browser on phone and computer.</p>
+          </div>
+
+          <div class="hero__stage" aria-label="Example: a 6 minute 47 second voice note summarized in three lines" role="img" data-hero>
+            <div class="float float--note">
+              <p class="float__label">Voice note from Khala</p>
+              <div class="float__wave">
+                <span class="play" aria-hidden="true"></span>
+                <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              </div>
+              <p class="float__time"><b data-count>6:47</b> minutes</p>
+            </div>
+
+            <div class="phone">
+              <span class="phone__tag">Concept</span>
+              <div class="phone__screen">
+                <div class="phone__status"><span>9:41</span><span class="phone__island"></span><span class="phone__dots">•••</span></div>
+                <p class="phone__chat">Family Group</p>
+                <p class="phone__members">Khala, Ammi, Baji and 14 others</p>
+                <p class="phone__sender">Khala</p>
+                <div class="phone__vn"><span class="play play--s"></span><span class="bars bars--s"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="phone__dur">6:47</span></div>
+                <div class="phone__sum">
+                  <p class="phone__sum-h"><span class="spark" aria-hidden="true"></span>Summary, 3 lines</p>
+                  <ul>
+                    <li>Shaadi is on Friday, in Lahore</li>
+                    <li>Everyone brings one dish</li>
+                    <li>Khala needs a station pickup</li>
+                  </ul>
+                </div>
+                <button class="phone__reply" type="button" tabindex="-1">Reply: Ji Khala, done</button>
+                <div class="phone__more"><span>Ammi sent 2 more voice notes</span><b>Summarize</b></div>
+              </div>
+            </div>
+
+            <div class="float float--sum">
+              <p class="float__label float__label--v">The summary</p>
+              <p class="float__ru" data-type>Shaadi Friday ko. Sab ek dish laayein. Khala ko station se pick karna hai.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how" id="how" aria-labelledby="how-title">
+        <div class="wrap">
+          <h2 id="how-title" class="h2 h2--light" data-reveal>Three steps. Less than a minute.</h2>
+          <ol class="steps">
+            <li class="step" data-reveal>
+              <span class="step__n">Step 01</span>
+              <span class="step__icon" aria-hidden="true">
+                <svg class="ico ico--share" viewBox="0 0 48 48"><path d="M28 10l10 10-10 10"/><path d="M38 20H22c-6 0-10 4-10 10v8"/></svg>
+              </span>
+              <h3 class="step__t">Forward</h3>
+              <p class="step__d">the voice note. In WhatsApp, long-press it, tap Share, pick Voice Note Summarizer.</p>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__n">Step 02</span>
+              <span class="step__icon" aria-hidden="true">
+                <svg class="ico ico--read" viewBox="0 0 48 48"><path class="l1" d="M10 14h28"/><path class="l2" d="M10 24h22"/><path class="l3" d="M10 34h16"/></svg>
+              </span>
+              <h3 class="step__t">Read</h3>
+              <p class="step__d">three lines. Who, what, when and where, without the six minutes.</p>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__n">Step 03</span>
+              <span class="step__icon" aria-hidden="true">
+                <svg class="ico ico--reply" viewBox="0 0 48 48"><path d="M8 22c0-7 6-12 16-12s16 5 16 12-6 12-16 12c-2 0-4 0-6-.6L10 38l2-7c-2.6-2.4-4-5.6-4-9Z"/><path class="tick" d="M17 22.5l5 4.5 9-9"/></svg>
+              </span>
+              <h3 class="step__t">Reply</h3>
+              <p class="step__d">in seconds. Tap a ready reply like “Ji Khala, done” and it opens in WhatsApp.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="wrap">
+          <div class="features__head" data-reveal>
+            <h2 id="features-title" class="h2">Made for how families actually talk</h2>
+            <p class="lede">Transcripts exist. Nobody wants to read six minutes either. So this gives you the part you need to act on.</p>
+          </div>
+          <ul class="flist">
+            <li class="fitem" data-reveal>
+              <span class="fitem__icon" aria-hidden="true"><svg class="ico ico--lang" viewBox="0 0 48 48"><path class="b1" d="M6 10h22v14H16l-6 5v-5H6z"/><path class="b2" d="M42 20H22v14h12l6 5v-5h2z"/></svg></span>
+              <div><h3>Urdu, Punjabi and English in one note</h3><p>Switches mid-sentence like Khala does. You get the summary in English and Roman Urdu.</p></div>
+            </li>
+            <li class="fitem" data-reveal>
+              <span class="fitem__icon" aria-hidden="true"><svg class="ico ico--pin" viewBox="0 0 48 48"><rect x="7" y="11" width="24" height="24" rx="4"/><path d="M7 18h24M14 8v6M24 8v6"/><path class="pinhead" d="M36 24c-4 0-7 3-7 6.6C29 35.5 36 42 36 42s7-6.5 7-11.4C43 27 40 24 36 24Z"/></svg></span>
+              <div><h3>Pulls out dates, places, who brings what</h3><p>“Friday, Lahore, Baji brings biryani, pick Khala up at 4” — listed separately so nothing gets missed.</p></div>
+            </li>
+            <li class="fitem" data-reveal>
+              <span class="fitem__icon" aria-hidden="true"><svg class="ico ico--wave" viewBox="0 0 48 48"><path d="M8 20v8M15 14v20M22 9v30M29 15v18M36 19v10M43 22v4"/></svg></span>
+              <div><h3>Long notes, short reading</h3><p>Up to 30 minutes per note. Several notes in a row are summarized one after another.</p></div>
+            </li>
+            <li class="fitem" data-reveal>
+              <span class="fitem__icon" aria-hidden="true"><svg class="ico ico--lock" viewBox="0 0 48 48"><rect x="11" y="21" width="26" height="19" rx="4"/><path class="shackle" d="M17 21v-6a7 7 0 0 1 14 0v6"/><path d="M24 29v4"/></svg></span>
+              <div><h3>Nothing is saved</h3><p>No account, no history on a server. Audio is turned into text, summarized and dropped.</p></div>
+            </li>
+            <li class="fitem" data-reveal>
+              <span class="fitem__icon" aria-hidden="true"><svg class="ico ico--copy" viewBox="0 0 48 48"><rect x="15" y="15" width="24" height="24" rx="4"/><path d="M33 15v-4a4 4 0 0 0-4-4H11a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h4"/><path class="tick" d="M21 27l4 4 8-8"/></svg></span>
+              <div><h3>Full transcript when you want it</h3><p>Copy the whole text, or share just the three lines with the person who missed it.</p></div>
+            </li>
+            <li class="fitem" data-reveal>
+              <span class="fitem__icon" aria-hidden="true"><svg class="ico ico--bolt" viewBox="0 0 48 48"><path d="M26 6 10 27h12l-2 15 16-21H24z"/></svg></span>
+              <div><h3>Free, and quick</h3><p>A six-minute note takes about twenty seconds. Works on cheap phones and slow data.</p></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- EXAMPLE -->
+      <section class="example" aria-labelledby="example-title">
+        <div class="wrap example__grid">
+          <div class="example__copy" data-reveal>
+            <h2 id="example-title" class="h2">What Khala said, and what you read</h2>
+            <p class="lede">A real-sounding note, trimmed. On the left is the start of the transcript. On the right is everything you get back.</p>
+            <a class="btn btn--ink" href="/app/?sample=1">Try the sample</a>
+          </div>
+          <div class="example__pair">
+            <figure class="transcript" data-reveal>
+              <figcaption>Transcript, 0:00 to 0:40 of 6:47</figcaption>
+              <p>“Assalam o alaikum sab ko… haan to main ye keh rahi thi ke Friday ko shaadi hai, Lahore mein, Model Town wale hall mein. Aur dekho, I don't want ke sab log khaali haath aa jayen, har ghar se ek dish aani chahiye… Baji tum biryani bana lena, tumhari biryani sab ko pasand hai… aur haan, meri train chaar baje pohnchegi station pe, koi mujhe lene aa jaye…”</p>
+              <p class="transcript__more">…6 more minutes</p>
+            </figure>
+            <div class="result" data-reveal>
+              <p class="result__h">Summary</p>
+              <ul class="result__lines">
+                <li>Shaadi is on Friday at the Model Town hall, Lahore.</li>
+                <li>Every household brings one dish. Baji makes biryani.</li>
+                <li>Khala's train arrives at 4 pm. Someone must pick her up.</li>
+              </ul>
+              <dl class="result__chips">
+                <div><dt>When</dt><dd>Friday, 4 pm</dd></div>
+                <div><dt>Where</dt><dd>Model Town, Lahore</dd></div>
+                <div><dt>Who brings what</dt><dd>Baji: biryani</dd></div>
+              </dl>
+              <div class="result__replies">
+                <span>Ji Khala, done</span><span>Main station aa jaunga</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOWNLOAD -->
+      <section class="get" id="download" aria-labelledby="get-title">
+        <div class="wrap get__grid">
+          <div class="get__copy" data-reveal>
+            <h2 id="get-title" class="h2 h2--light">Get it on your phone</h2>
+            <p class="lede lede--light">The Android app sits in WhatsApp's share menu, so one tap sends a voice note across. On iPhone or a computer, use it online — same summaries, nothing to install.</p>
+            <div class="hero__cta">
+              <a class="btn btn--mint btn--big" href="{{APK_URL}}" data-apk rel="nofollow">
+                <svg class="ico ico--android" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 18a8.5 8.5 0 0 1 17 0Z"/><path class="ant" d="M7.6 10.6 6 8M16.4 10.6 18 8"/><circle cx="9" cy="14.5" r=".9" fill="currentColor" stroke="none"/><circle cx="15" cy="14.5" r=".9" fill="currentColor" stroke="none"/></svg>
+                Download APK
+              </a>
+              <a class="btn btn--line btn--big" href="/app/">Use online</a>
+            </div>
+            <p class="get__meta">Android 7.0 and newer. Small download, updates from this page.</p>
+          </div>
+          <ol class="install" data-reveal>
+            <li><b>Download the APK</b><span>Tap the button. Chrome may ask “Download anyway?” — tap it.</span></li>
+            <li><b>Allow the install</b><span>Open the file. If Android asks, allow installs from Chrome for this one time.</span></li>
+            <li><b>Share from WhatsApp</b><span>Long-press any voice note, tap Share, choose Voice Note Summarizer.</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="wrap faq__grid">
+          <h2 id="faq-title" class="h2" data-reveal>Questions</h2>
+          <div class="faq__list">
+            <details data-reveal>
+              <summary>How do I summarize a WhatsApp voice note?</summary>
+              <p>On Android, install the app, then long-press the voice note in WhatsApp, tap Share and choose Voice Note Summarizer. On any phone or computer, open the <a href="/app/">online app</a>, pick the voice note file and tap Summarize. You get three lines, a Roman Urdu summary and ready replies.</p>
+            </details>
+            <details data-reveal>
+              <summary>Does it understand Urdu and Punjabi?</summary>
+              <p>Yes. It is built for notes that mix Urdu, Punjabi and English in the same sentence, which is how most family voice notes sound. Summaries come out in English and Roman Urdu.</p>
+            </details>
+            <details data-reveal>
+              <summary>Is it free?</summary>
+              <p>Yes. The Android APK and the online app are free, with no sign-up.</p>
+            </details>
+            <details data-reveal>
+              <summary>Are my voice notes saved?</summary>
+              <p>No. Audio is sent over an encrypted connection, turned into text, summarized and then discarded. Nothing is stored on a server and there are no accounts. Read the <a href="/privacy/">privacy policy</a>.</p>
+            </details>
+            <details data-reveal>
+              <summary>How long can a voice note be?</summary>
+              <p>Up to 30 minutes per note. A typical six-minute note is summarized in under half a minute.</p>
+            </details>
+            <details data-reveal>
+              <summary>How do I install the APK?</summary>
+              <p>Tap Download APK, open the file, allow installs from your browser when Android asks, then tap Install. After that, Voice Note Summarizer appears in the WhatsApp share menu.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- OWNER / FOOTER -->
+    <footer class="foot" aria-labelledby="owner-title">
+      <div class="wrap">
+        <section class="owner" data-reveal>
+          <div class="owner__id">
+            {{OWNER_AVATAR_HTML}}
+            <div>
+              <p class="owner__kicker">Made by</p>
+              <h2 id="owner-title" class="owner__name">{{OWNER_NAME}}</h2>
+              <p class="owner__role">{{OWNER_ROLE}}<span class="owner__loc">{{OWNER_LOCATION}}</span></p>
+            </div>
+          </div>
+          <p class="owner__bio">{{OWNER_BIO}}</p>
+          <ul class="owner__links">{{OWNER_LINKS_HTML}}</ul>
+        </section>
+        <div class="foot__bar">
+          <p>© {{YEAR}} {{OWNER_NAME}}. <span class="urdu urdu--s" lang="ur" dir="rtl">شکریہ</span></p>
+          <ul>
+            <li><a href="/app/">Online app</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="{{REPO_URL}}" rel="noopener" target="_blank">Source code</a></li>
+          </ul>
+          <p class="foot__note">Not affiliated with WhatsApp or Meta.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/site.js?v={{ASSET_V}}" defer></script>
+  </body>
+</html>

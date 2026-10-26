@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Privacy Policy | Voice Note Summarizer</title>
+    <meta name="description" content="How Voice Note Summarizer handles your voice notes: processed to make a summary, then discarded. No accounts, no storage, no ads.">
+    <link rel="canonical" href="{{SITE_URL}}/privacy/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F2A1F">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Privacy Policy — Voice Note Summarizer">
+    <meta property="og:url" content="{{SITE_URL}}/privacy/">
+    <meta property="og:image" content="{{SITE_URL}}/assets/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/base.css?v={{ASSET_V}}">
+    <style>
+      main { width: min(720px, 100% - 2.5rem); margin: 0 auto; padding: 3rem 0 4rem; }
+      h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1; letter-spacing: -.045em; font-weight: 800; font-variation-settings: "opsz" 72; }
+      h2 { font-size: 1.35rem; letter-spacing: -.02em; margin: 2rem 0 .5rem; }
+      p, li { color: var(--ink-2); max-width: 64ch; }
+      ul { list-style: disc; padding-left: 1.25rem; display: grid; gap: .35rem; }
+      .back { display: inline-block; margin-bottom: 2rem; color: var(--leaf); font-weight: 650; text-decoration: none; }
+      .upd { margin-top: .75rem; font-size: .92rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="/">← Voice Note Summarizer</a>
+      <h1>Privacy policy</h1>
+      <p class="upd">Last updated {{BUILD_DATE}}</p>
+
+      <h2>The short version</h2>
+      <p>Your voice note is used to make a summary, then it is gone. There are no accounts, no ads and no tracking.</p>
+
+      <h2>What happens to a voice note</h2>
+      <ul>
+        <li>On your device, the audio is converted to a smaller format.</li>
+        <li>It is sent over an encrypted (HTTPS) connection to our server on Cloudflare, which runs a speech-to-text model and a summary model on Cloudflare Workers AI.</li>
+        <li>The transcript and summary are sent back to your device. Neither the audio, the transcript nor the summary is saved on the server.</li>
+        <li>Cloudflare processes the request only to return the result. Under Cloudflare's terms, Workers AI does not use your inputs to train models.</li>
+      </ul>
+
+      <h2>What stays on your device</h2>
+      <p>Your options (summary language, spoken language, sender's name) are remembered in your browser or app storage. Clearing app data removes them.</p>
+
+      <h2>Permissions in the Android app</h2>
+      <p>The app needs internet access to make summaries. It receives audio only when you share a voice note to it. It does not read your chats, contacts or files.</p>
+
+      <h2>Children</h2>
+      <p>The service is not aimed at children under 13.</p>
+
+      <h2>Contact</h2>
+      <p>Questions: {{OWNER_NAME}}, <a href="mailto:{{OWNER_EMAIL}}">{{OWNER_EMAIL}}</a>.</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "siteUrl": "https://voice-note-summarizer.pages.dev",
+  "appName": "Voice Note Summarizer",
+  "shortName": "VN Summarizer",
+  "githubRepo": "saadahmad888/voice-note-summarizer",
+  "twitterHandle": "",
+  "googleSiteVerification": "",
+  "bingSiteVerification": "",
+  "owner": {
+    "name": "Saad Ahmad",
+    "role": "Developer & creator",
+    "bio": "I build small, useful apps for everyday problems, like the family group that runs on six-minute voice notes.",
+    "location": "Lahore, Pakistan",
+    "email": "hello@isaadahmad.com",
+    "phone": "03207906634",
+    "website": "https://isaadahmad.com",
+    "github": "https://github.com/saadahmad888",
+    "linkedin": "https://www.linkedin.com/in/isaadahmad/",
+    "twitter": "https://x.com/saadahmad888",
+    "instagram": "https://www.instagram.com/saadahmad3039/",
+    "photo": "https://isaadahmad.com/images/saad.webp"
+  }
+}

@@ -1,0 +1,91 @@
+# Builds the Android APK on GitHub's free servers — no Android Studio needed.
+# Every push to main publishes a new release; the website's "Download APK"
+# button always points to the newest one.
+name: Build Android APK
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-apk
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install
+        run: npm ci
+
+      - name: Build web app
+        run: npm run build
+
+      - name: Copy web app into Android project
+        run: npx cap sync android
+
+      - name: Load signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.keystore"
+            echo "VNS_KEYSTORE_PATH=$RUNNER_TEMP/release.keystore" >> "$GITHUB_ENV"
+            echo "SIGNED=1" >> "$GITHUB_ENV"
+          else
+            echo "::warning::ANDROID_KEYSTORE_BASE64 secret not set. Building a debug APK. Users will have to uninstall before each update. See README step 2."
+          fi
+
+      - name: Build APK
+        working-directory: android
+        env:
+          VNS_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          chmod +x gradlew
+          VERSION="1.0.${GITHUB_RUN_NUMBER}"
+          if [ "$SIGNED" = "1" ]; then
+            ./gradlew --no-daemon assembleRelease -PvnsVersionCode=${GITHUB_RUN_NUMBER} -PvnsVersionName=$VERSION
+            cp app/build/outputs/apk/release/app-release.apk ../VoiceNoteSummarizer.apk
+          else
+            ./gradlew --no-daemon assembleDebug -PvnsVersionCode=${GITHUB_RUN_NUMBER} -PvnsVersionName=$VERSION
+            cp app/build/outputs/apk/debug/app-debug.apk ../VoiceNoteSummarizer.apk
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          ls -la ../VoiceNoteSummarizer.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VoiceNoteSummarizer-${{ env.VERSION }}
+          path: VoiceNoteSummarizer.apk
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.VERSION }}
+          name: Voice Note Summarizer ${{ env.VERSION }}
+          body: |
+            Install: download **VoiceNoteSummarizer.apk** on your Android phone, open it and tap Install.
+            Then in WhatsApp: long-press a voice note → Share → Voice Note Summarizer.
+          files: VoiceNoteSummarizer.apk
+          make_latest: true

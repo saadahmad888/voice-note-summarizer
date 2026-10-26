@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Voice Note Summarizer</string>
+    <string name="title_activity_main">Voice Note Summarizer</string>
+    <string name="package_name">com.voicenotesummarizer.app</string>
+    <string name="custom_url_scheme">com.voicenotesummarizer.app</string>
+</resources>

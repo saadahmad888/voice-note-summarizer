@@ -1,0 +1,19 @@
+{
+  "name": "voice-note-summarizer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Turn long WhatsApp voice notes into three-line summaries. Urdu, Punjabi and English. Web app + Android APK.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && npx wrangler@4 pages dev dist",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:apk": "npm run android:sync && cd android && ./gradlew assembleDebug"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/cli": "8.5.3",
+    "@capacitor/core": "8.5.3"
+  }
+}

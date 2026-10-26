@@ -1,0 +1,8 @@
+node_modules/
+dist/
+www/
+.wrangler/
+.DS_Store
+*.keystore
+*.jks
+android/app/release/
